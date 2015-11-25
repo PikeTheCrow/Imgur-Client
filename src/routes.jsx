@@ -4,10 +4,12 @@ var HashHistory = require('react-router/lib/hashhistory'); //cache memory
 var Router = ReactRouter.Router; //decide content to show on page
 var Route = ReactRouter.Route; //configure the router
 var Main = require('./components/main');
+var Topic = require('./components/topic');
 
 module.exports = (
   <Router history = {new HashHistory}>
     <Route path = "/" component = {Main}>
+      <Route path="topics/:id" component={Topic} />
     </Route>
   </Router>
 )
