@@ -47,7 +47,7 @@ module.exports = React.createClass({
   },
 
   renderComments: function() {
-    if(this.state.comments) {
+    if(!this.state.comments) {
       return null;
     } else {
       return <CommentBox comments={this.state.comments} />
